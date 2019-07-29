@@ -1,0 +1,9 @@
+version: '2'
+options:
+  project_root: config_path
+  verbose: true
+syncs:
+  web-unison-sync:
+    src: '.'
+    sync_prefer: 'src'
+    sync_excludes: ['.bundle', '.git', 'log', 'tmp', 'vendor/bundle']

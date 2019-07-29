@@ -1,0 +1,20 @@
+version: "2"
+services:
+  web:
+    shm_size: 512M
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      DATABASE_HOST: postgres
+      LANG: 'en_US.UTF-8'
+      LANGUAGE: 'en_US.UTF-8'
+      LC_ALL: 'C.UTF-8'
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:9.6-alpine
+    ports:
+      - '15432:5432'
