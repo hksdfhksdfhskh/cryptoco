@@ -1,0 +1,152 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accepts:
+      - application/json
+      X-CMC_PRO_API_KEY:
+      - 3b681e63-005a-4a88-9963-34811960ca39
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 31 Jul 2019 00:37:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d26d9ed6f01b15a4743d03fd098b20d9e1564533476; expires=Thu, 30-Jul-20
+        00:37:56 GMT; path=/; domain=.coinmarketcap.com; HttpOnly; Secure
+      - __cf_bm=2b52aab41993c701ac5fd4f1f97f341da30e1972-1564533476-1800-ARmReIKg1IlkaLCzVGdCdAWr3RC8+67Dqel8vLpOjfaMWhCWr66lF8BgPMcB3kAlem1e0tbfu0Tey5Q6E7aUXzc=;
+        path=/; expires=Wed, 31-Jul-19 01:07:56 GMT; domain=.coinmarketcap.com; HttpOnly
+      vary:
+      - origin,accept-encoding
+      cache-control:
+      - no-cache
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      CF-RAY:
+      - 4feb81b4da42a540-NRT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status": {
+                "timestamp": "2019-07-31T00:37:56.728Z",
+                "error_code": 0,
+                "error_message": null,
+                "elapsed": 12,
+                "credit_count": 1
+            },
+            "data": [
+                {
+                    "id": 1,
+                    "name": "Bitcoin",
+                    "symbol": "BTC",
+                    "slug": "bitcoin",
+                    "is_active": 1,
+                    "first_historical_data": "2013-04-28T18:47:21.000Z",
+                    "last_historical_data": "2019-07-31T00:34:01.000Z",
+                    "platform": null
+                },
+                {
+                    "id": 2,
+                    "name": "Litecoin",
+                    "symbol": "LTC",
+                    "slug": "litecoin",
+                    "is_active": 1,
+                    "first_historical_data": "2013-04-28T18:47:22.000Z",
+                    "last_historical_data": "2019-07-31T00:34:01.000Z",
+                    "platform": null
+                },
+                {
+                    "id": 3,
+                    "name": "Namecoin",
+                    "symbol": "NMC",
+                    "slug": "namecoin",
+                    "is_active": 1,
+                    "first_historical_data": "2013-04-28T18:47:22.000Z",
+                    "last_historical_data": "2019-07-31T00:34:01.000Z",
+                    "platform": null
+                },
+                {
+                    "id": 1027,
+                    "name": "Ethereum",
+                    "symbol": "ETH",
+                    "slug": "ethereum",
+                    "is_active": 1,
+                    "first_historical_data": "2015-08-07T14:49:30.000Z",
+                    "last_historical_data": "2019-07-31T00:34:02.000Z",
+                    "platform": null
+                },
+                {
+                    "id": 2911,
+                    "name": "ORS Group",
+                    "symbol": "ORS",
+                    "slug": "ors-group",
+                    "is_active": 1,
+                    "first_historical_data": "2018-07-10T01:04:18.000Z",
+                    "last_historical_data": "2019-07-31T00:34:10.000Z",
+                    "platform": {
+                        "id": 1027,
+                        "name": "Ethereum",
+                        "symbol": "ETH",
+                        "slug": "ethereum",
+                        "token_address": "0xac2e58a06e6265f1cf5084ee58da68e5d75b49ca"
+                    }
+                },
+                {
+                    "id": 3784,
+                    "name": "OVCODE",
+                    "symbol": "OVC",
+                    "slug": "ovcode",
+                    "is_active": 1,
+                    "first_historical_data": "2019-03-07T23:54:10.000Z",
+                    "last_historical_data": "2019-07-31T00:34:12.000Z",
+                    "platform": {
+                        "id": 1027,
+                        "name": "Ethereum",
+                        "symbol": "ETH",
+                        "slug": "ethereum",
+                        "token_address": "0x49d09cda1deb8a1680f1270c5ed15218fc4b18f0"
+                    }
+                },
+                {
+                    "id": 4189,
+                    "name": "Ultra",
+                    "symbol": "UOS",
+                    "slug": "ultra",
+                    "is_active": 1,
+                    "first_historical_data": "2019-07-30T20:54:13.000Z",
+                    "last_historical_data": "2019-07-31T00:34:12.000Z",
+                    "platform": {
+                        "id": 1027,
+                        "name": "Ethereum",
+                        "symbol": "ETH",
+                        "slug": "ethereum",
+                        "token_address": "0xd13c7342e1ef687c5ad21b27c2b65d772cab5c8c"
+                    }
+                }
+            ]
+        }
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
+  recorded_at: Wed, 31 Jul 2019 00:37:57 GMT
+recorded_with: VCR 4.0.0
