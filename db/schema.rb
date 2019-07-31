@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_29_222820) do
+ActiveRecord::Schema.define(version: 2019_07_30_074905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coins", force: :cascade do |t|
+    t.string "slug", null: false
+    t.string "symbol", null: false
+    t.string "name", null: false
+    t.boolean "is_active", default: true, null: false
+    t.integer "platform_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["slug"], name: "index_coins_on_slug", unique: true
+  end
 
   create_table "currencies", force: :cascade do |t|
     t.date "date", null: false

@@ -32,10 +32,12 @@ module CoinMarketCap
     body
   end
 
-  # list_currencies returns a current list of all active currencies supported
-  # by CoinMarketCap
-  def list_currencies
+  # list_coins returns a current list of all active currencies supported
+  def list_coins
     endpoint = "#{HOST}/v1/cryptocurrency/map"
     get(endpoint)
+  end
+
+  def market_data
   end
 end

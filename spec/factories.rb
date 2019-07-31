@@ -1,4 +1,10 @@
 FactoryBot.define do
+  factory :coin do
+    slug 'bitcoin'
+    symbol 'BTC'
+    name 'Bitcoin'
+  end
+
   factory :currency do
     date { Date.parse("2019-08-17") }
     code { 'btc' }
