@@ -18,6 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 gem "typhoeus"
 gem "pry-rails"
 gem "vcr"
+gem 'database_cleaner'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
