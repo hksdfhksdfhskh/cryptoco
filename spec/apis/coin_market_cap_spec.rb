@@ -29,4 +29,15 @@ describe CoinMarketCap do
       end
     end
   end
+
+  describe '#market_data' do
+    it 'returns market data' do
+      VCR.use_cassette(:coin_market_cap_market_data) do
+        response = subject.market_data
+        expect(response['data']).not_to be_blank
+        expect(response['data']).to include(include("slug" => "bitcoin"))
+        expect(response['data']).to include(include("quote"))
+      end
+    end
+  end
 end

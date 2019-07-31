@@ -39,5 +39,7 @@ module CoinMarketCap
   end
 
   def market_data
+    endpoint = "#{HOST}/v1/cryptocurrency/listings/latest"
+    get(endpoint)
   end
 end
