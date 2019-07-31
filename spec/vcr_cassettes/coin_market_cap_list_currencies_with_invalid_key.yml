@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Typhoeus - https://github.com/typhoeus/typhoeus
+      Accepts:
+      - application/json
+      X-CMC_PRO_API_KEY:
+      - INCORRECT_KEY
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Wed, 31 Jul 2019 00:52:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '202'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfbac4d03fbb01db4e387946e34e5ccef1564534347; expires=Thu, 30-Jul-20
+        00:52:27 GMT; path=/; domain=.coinmarketcap.com; HttpOnly; Secure
+      - __cf_bm=2471cce8167774db8573409febf8a3f59ceaf44f-1564534347-1800-Afhpw5C3f5bF1ya+RZsQIcX28Yo+n3O8woh81wTFffAxPGaT/1P84O7zNTJdX6Ulu+BFesu4khe9TsUxXlwTQnc=;
+        path=/; expires=Wed, 31-Jul-19 01:22:27 GMT; domain=.coinmarketcap.com; HttpOnly
+      vary:
+      - origin
+      cache-control:
+      - no-cache
+      Expect-CT:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Server:
+      - cloudflare
+      CF-RAY:
+      - 4feb96f53ad56ef7-NRT
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status": {
+                "timestamp": "2019-07-31T00:52:27.172Z",
+                "error_code": 401,
+                "error_message": "This API Key is invalid.",
+                "elapsed": 0,
+                "credit_count": 0
+            }
+        }
+    http_version: '1.1'
+    adapter_metadata:
+      effective_url: https://pro-api.coinmarketcap.com/v1/cryptocurrency/map
+  recorded_at: Wed, 31 Jul 2019 00:52:27 GMT
+recorded_with: VCR 4.0.0

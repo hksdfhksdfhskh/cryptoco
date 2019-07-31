@@ -1,2 +1,2 @@
-class CoinMarketCap::TimeoutError < StandardError
+class CoinMarketCap::TimeoutError < CoinMarketCap::Error
 end

@@ -19,8 +19,17 @@ module CoinMarketCap
     ).run
 
     raise TimeoutError.new("Timeout on: #{endpoint}") if response.timed_out?
+    parse(response)
+  end
 
-    JSON.parse(response.body)
+  def parse(response)
+    body = JSON.parse(response.body)
+    status = body['status']
+    error_code, error_message = status['error_code'], status['error_message']
+
+    raise Error.new("Experienced error with code #{error_code}: #{error_message}") unless error_code.zero?
+
+    body
   end
 
   # list_currencies returns a current list of all active currencies supported
