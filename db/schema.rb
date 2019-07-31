@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_30_074905) do
+ActiveRecord::Schema.define(version: 2019_07_31_072904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,13 +28,12 @@ ActiveRecord::Schema.define(version: 2019_07_30_074905) do
 
   create_table "currencies", force: :cascade do |t|
     t.date "date", null: false
-    t.string "code", null: false
-    t.string "name", null: false
     t.integer "market_capitalization", null: false
     t.integer "value_usd_cents", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["date", "code"], name: "index_currencies_on_date_and_code", unique: true
+    t.integer "coin_id", null: false
+    t.index ["coin_id"], name: "index_currencies_on_coin_id"
   end
 
 end
