@@ -1,10 +1,10 @@
 require 'rails_helper'
 
-describe Currency, type: :model do
-  subject { create(:currency) }
+describe Worth, type: :model do
+  subject { create(:worth) }
 
   it 'should not allow creating record for the same date and currency' do
-    record = build(:currency, date: subject.date, code: subject.code)
+    record = build(:worth, date: subject.date, coin: subject.coin)
     expect(record).not_to be_valid
 
     record.date += 1.day
