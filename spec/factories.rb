@@ -6,9 +6,10 @@ FactoryBot.define do
   end
 
   factory :worth do
-    date { Date.parse("2019-08-17") }
+    quote_time { Date.parse("2019-08-17") }
     coin { create(:coin) }
     market_capitalization { 1_000_000 }
-    value_usd_cents { 500 }
+    quote 'USD'
+    quoted_value { 500 }
   end
 end
