@@ -30,3 +30,11 @@ A service might not execute successfully, in that case, we can retrieve the erro
 ## API modules
 
 The `app/apis` folders contain 3rd party APIs implementations. The implementation is business-less and stateless. They are all pure API calls wrapped in a neat, readable function.
+
+## Rails Credentials
+
+I am using Rails [encrypted credentials](https://www.engineyard.com/blog/rails-encrypted-credentials-on-rails-5.2) to store sensitive data. This way, we can safely commit the sensitive data into the repository. To open the credentials, we will need a master key. We need to keep this key very carefully, but since this is a take-home test app, I will kindly share the master key here :) ~please take care~ ;')
+
+```
+dd82364f58bc37e0d61359c4aa00e5da
+```
