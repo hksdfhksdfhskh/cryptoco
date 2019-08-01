@@ -22,7 +22,8 @@ $ docker-compose run web bundle exec rake setup:all
 Alternatively, one may use `docker exec` instead of `docker-compose run` so as not to spin up a new cotainer, and instead execute the given command on a running container:
 
 ```
-docker exec web bundle exec rake market_values:update
+$ docker ps
+$ docker exec cryptoco_web_1 bundle exec rake market_values:update
 ```
 
 ## Decisions
