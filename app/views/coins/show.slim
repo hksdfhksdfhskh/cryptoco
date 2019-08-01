@@ -17,11 +17,11 @@ table.table.table-hover
     thead
         tr
             th scope='col'
-            th scope='col' Value (USD)
-            th scope='col' Market Cap
+            th.money scope='col' Value (USD)
+            th.money scope='col' Market Cap
     tbody
         - daily_rates(@coin).each do |worth|
             tr
                 th scope='row' = worth.quote_time.strftime("%Y-%m-%d")
-                td = number_with_delimiter(worth.quoted_value)
-                td = number_with_delimiter(worth.market_capitalization)
+                td.money = number_with_delimiter(worth.quoted_value)
+                td.money = number_with_delimiter(worth.market_capitalization)

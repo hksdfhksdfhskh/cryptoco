@@ -12,13 +12,13 @@
                     th scope='col' #
                     th scope='col' Code
                     th scope='col' Name
-                    th scope='col' Market Cap
-                    th scope='col' Value (USD)
+                    th.money scope='col' Market Cap
+                    th.money scope='col' Value (USD)
             tbody
                 - sorted_coins.limit(10).each.with_index(1) do |coin, idx|
                     tr
                         th scope='row' =idx
                         td =coin.symbol
                         td =link_to coin.name, coin
-                        td =number_with_delimiter(coin.worths.latest.first.market_capitalization)
-                        td =number_with_delimiter(coin.worths.latest.first.quoted_value)
+                        td.money =number_with_delimiter(coin.worths.latest.first.market_capitalization)
+                        td.money =number_with_delimiter(coin.worths.latest.first.quoted_value)
