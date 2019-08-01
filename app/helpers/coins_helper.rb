@@ -54,4 +54,12 @@ module CoinsHelper
 
     data
   end
+
+  def market_value_trend(coin)
+    worths = coin.worths.where(quote: 'USD').latest_quote_ordering
+    current_worth = worths.first
+    last_worth = worths.second
+
+    current_worth.quoted_value <=> last_worth.quoted_value
+  end
 end

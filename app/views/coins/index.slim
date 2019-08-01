@@ -18,7 +18,13 @@
                 - sorted_coins.limit(10).each.with_index(1) do |coin, idx|
                     tr
                         th scope='row' =idx
-                        td =coin.symbol
+                        td
+                            - trend = market_value_trend(coin)
+                            - if trend == -1
+                                |🔽&nbsp;
+                            - elsif trend == 1
+                                |🔼&nbsp;
+                            =coin.symbol
                         td =link_to coin.name, coin
-                        td.money =number_with_delimiter(coin.worths.latest.first.market_capitalization)
-                        td.money =number_with_delimiter(coin.worths.latest.first.quoted_value)
+                        td.money =number_with_delimiter(coin.worths.latest_quote_ordering.first.market_capitalization)
+                        td.money =number_with_delimiter(coin.worths.latest_quote_ordering.first.quoted_value)

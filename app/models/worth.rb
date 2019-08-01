@@ -3,5 +3,5 @@ class Worth < ApplicationRecord
 
   belongs_to :coin
 
-  scope :latest, -> { order('quote_time DESC') }
+  scope :latest_quote_ordering, -> { order('quote_time DESC') }
 end
