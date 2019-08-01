@@ -53,6 +53,10 @@ Slim is a templating engine that is very minimalist, and also compile fast compa
 
 Bootstrap makes it easy to build a responsive website. Its syntax is relatively intuitive to use. It also has a lot of additional components, such as: card, navbar, etc. It has a modern and clean look and feel. A well-written documentations do help, too.
 
+### Turbolinks
+
+Make the app feels like a Single-Page Application, without the overhead complexity. In other words: it navigates from one page to another page much faster.
+
 ### Newline-ender
 
 Every files should end in an empty newline. This is to avoid unnecessarily changing history of a code that happen to be at the tail of the file.
