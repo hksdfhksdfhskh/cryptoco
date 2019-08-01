@@ -25,3 +25,14 @@ table.table.table-hover
                 th scope='row' = worth.quote_time.strftime("%Y-%m-%d")
                 td.money = number_with_delimiter(worth.quoted_value)
                 td.money = number_with_delimiter(worth.market_capitalization)
+
+br
+br
+
+- if @coin.applications.has_worths.any?
+    h4.centered Used as a platform by
+    br
+    ul.coin-applications
+        - @coin.applications.has_worths.ordered_by_market_cap.each do |application|
+            li
+                = link_to application.symbol, application
