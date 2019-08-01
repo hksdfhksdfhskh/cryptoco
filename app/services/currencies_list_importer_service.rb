@@ -32,7 +32,7 @@ class CurrenciesListImporterService
       if missing_currencies.include? coin_data['slug']
         coin = Coin.new(slug: coin_data['slug'])
       else
-        coin = known_coins.bsearch { |x| coin_data['slug'] <=> x.slug }
+        coin = known_coins.find { |x| coin_data['slug'] == x.slug }
       end
 
       coin.symbol = coin_data['symbol']
