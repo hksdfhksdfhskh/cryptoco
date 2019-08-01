@@ -60,3 +60,7 @@ Make the app feels like a Single-Page Application, without the overhead complexi
 ### Newline-ender
 
 Every files should end in an empty newline. This is to avoid unnecessarily changing history of a code that happen to be at the tail of the file.
+
+### Mobile-optimized
+
+THe viewport for mobile is set to device-width, so it should display fine enough on mobile devices
