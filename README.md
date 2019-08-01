@@ -14,10 +14,16 @@ $ docker-compose run web bundle exec rake setup:all
 ## Setup
 
 - Clone
-- Init docker
-- Migrate: `rake db:create db:migrate`
-- Fetch market data: `rake market_values:update`
-- Start server: `rails s` 
+- Init and up the docker container
+- Migrate: `docker-compose run web bundle exec rake setup:all`
+- Fetch market data: `docker-compose run web bundle exec rake market_values:update`
+- Start server: `rails s` (not needed, if using docker)
+
+Alternatively, one may use `docker exec` instead of `docker-compose run` so as not to spin up a new cotainer, and instead execute the given command on a running container:
+
+```
+docker exec web bundle exec rake market_values:update
+```
 
 ## Decisions
 
