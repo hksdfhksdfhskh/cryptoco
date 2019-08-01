@@ -8,7 +8,7 @@ module CoinsHelper
   def daily_rates(coin)
     daily_quote_ids = Worth.select("max(id) as id")
       .where(coin: coin, quote: 'USD')
-      .group([:coin_id, 'quote_time::date'])
+      .group([:coin_id, %Q{DATE(quote_time::timestamp AT TIME ZONE 'UTC' AT TIME ZONE '#{Time.zone.name}')}])
 
     Worth
       .where(id: daily_quote_ids)
