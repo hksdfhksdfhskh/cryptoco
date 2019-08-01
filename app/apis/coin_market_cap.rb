@@ -38,6 +38,10 @@ module CoinMarketCap
     get(endpoint)
   end
 
+  # market_data returns the current market data such as the market capitalization,
+  # the coin's value, and so on for 100 coins ordered by the market capitalization.
+  # the data is actually paginated, and we can retrieve the next set, but we don't
+  # need to fetch other than the first 100 most popular coins for now.
   def market_data
     endpoint = "#{HOST}/v1/cryptocurrency/listings/latest"
     get(endpoint)
