@@ -45,7 +45,7 @@ module CoinsHelper
     }
 
     coin.worths.order('quote_time DESC').limit(100).to_a.reverse.each do |worth|
-      label = worth.quote_time.to_date == Date.today ?
+      label = worth.quote_time.to_date == Date.current ?
         worth.quote_time.strftime("%H:%M") :
         worth.quote_time.strftime("%Y-%m-%d %H:%M")
       data[:labels] << label
