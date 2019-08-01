@@ -11,6 +11,14 @@ $ docker-compose run web rails c
 $ docker-compose run web bundle exec rake setup:all
 ```
 
+## Setup
+
+- Clone
+- Init docker
+- Migrate: `rake db:create db:migrate`
+- Fetch market data: `rake market_values:update`
+- Start server: `rails s` 
+
 ## Decisions
 
 ### Using docker-sync
