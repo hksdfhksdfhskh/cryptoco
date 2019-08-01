@@ -30,6 +30,7 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem 'popper_js', '~> 1.14.5'
 gem 'devise'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'factory_bot_rails'

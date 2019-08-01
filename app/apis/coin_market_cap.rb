@@ -2,7 +2,7 @@
 # dashboard: https://pro.coinmarketcap.com/login
 module CoinMarketCap
   HOST = "https://pro-api.coinmarketcap.com"
-  API_KEY = Rails.application.credentials.config[Rails.env.to_sym][:coin_market_cap_api_key]
+  API_KEY = SECRETS[:coin_market_cap_api_key]
   TIMEOUT = 5.seconds
 
   extend self
