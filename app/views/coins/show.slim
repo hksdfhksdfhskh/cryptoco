@@ -1,0 +1,27 @@
+h2.centered
+    = @coin.name
+    div style='font-size: 1rem;'
+        = link_to "back to the main table", coins_path
+br
+br
+
+h4.centered Values (USD)
+= line_chart aggregated_worths_values_data(@coin), chart_line_options
+br
+br
+
+h4.centered Daily rates of #{@coin.name} (#{@coin.symbol})
+br
+br
+table.table.table-hover
+    thead
+        tr
+            th scope='col'
+            th scope='col' Value (USD)
+            th scope='col' Market Cap
+    tbody
+        - daily_rates(@coin).each do |worth|
+            tr
+                th scope='row' = worth.quote_time.strftime("%Y-%m-%d")
+                td = number_with_delimiter(worth.quoted_value)
+                td = number_with_delimiter(worth.market_capitalization)

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
       omniauth_callbacks: "callbacks"
     }
 
-  resources :coins, only: [:index]
+  resources :coins, only: [:index, :show]
 end

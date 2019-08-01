@@ -3,4 +3,8 @@ class CoinsController < ApplicationController
 
   def index
   end
+
+  def show
+    @coin = Coin.find(params[:id])
+  end
 end

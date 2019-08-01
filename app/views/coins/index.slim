@@ -19,6 +19,6 @@
                     tr
                         th scope='row' =idx
                         td =coin.symbol
-                        td =coin.name
-                        td =coin.worths.latest.first.market_capitalization
-                        td =coin.worths.latest.first.quoted_value
+                        td =link_to coin.name, coin
+                        td =number_with_delimiter(coin.worths.latest.first.market_capitalization)
+                        td =number_with_delimiter(coin.worths.latest.first.quoted_value)
