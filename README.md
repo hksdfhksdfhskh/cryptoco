@@ -38,3 +38,11 @@ I am using Rails [encrypted credentials](https://www.engineyard.com/blog/rails-e
 ```
 dd82364f58bc37e0d61359c4aa00e5da
 ```
+
+### Slim templates
+
+Slim is a templating engine that is very minimalist, and also compile fast compared to other engines (such as HAML).
+
+### Bootstrap
+
+Bootstrap makes it easy to build a responsive website. Its syntax is relatively intuitive to use. It also has a lot of additional components, such as: card, navbar, etc. It has a modern and clean look and feel. A well-written documentations do help, too.

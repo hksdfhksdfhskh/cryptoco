@@ -31,6 +31,7 @@ gem 'jquery-rails'
 gem 'popper_js', '~> 1.14.5'
 gem 'devise'
 gem 'omniauth-github'
+gem 'slim-rails'
 
 group :development, :test do
   gem 'factory_bot_rails'

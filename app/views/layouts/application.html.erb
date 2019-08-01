@@ -9,10 +9,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class='bg-light'>
+    <div class='container'>
+      <div class='py-5 text-center'>
+        <h1>Cryptoco</h1>
+      </div>
+      
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-    <%= yield %>
+      <%= yield %>
+    </div>
   </body>
 </html>
