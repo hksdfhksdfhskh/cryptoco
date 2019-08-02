@@ -78,6 +78,15 @@ Rake task is a handy tools to run arbitrary scripts related to the system. For e
 
 Slim is a templating engine that is very minimalist, and also compile fast compared to other engines (such as HAML).
 
+### Testing
+
+The Ruby's community testing framework of choice, RSpec, is being used. I have nothing against minitest, but RSpec is widely popular. Its syntax is also subjectively intuitive to use. Other than that, FactoryBot is used to help stubbing or creating a record once needed. Database cleaner is used so as to make each test run in a clean state, side-effect free from the previous or the next tests. The integration testings are, for now, written only in Cucumber.
+
+```
+$ bundle exec rspec
+$ bundle exec cucumber
+```
+
 ### Bootstrap
 
 Bootstrap makes it easy to build a responsive website. Its syntax is relatively intuitive to use. It also has a lot of additional components, such as: card, navbar, etc. It has a modern and clean look and feel. A well-written documentations do help, too.

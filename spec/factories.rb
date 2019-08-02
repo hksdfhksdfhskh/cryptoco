@@ -12,4 +12,9 @@ FactoryBot.define do
     quote 'USD'
     quoted_value { 500 }
   end
+
+  factory :user do
+    sequence(:email) { |n| "user#{n}@example.com" }
+    password { 'password' }
+  end
 end
