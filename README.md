@@ -101,4 +101,4 @@ Every files should end in an empty newline. This is to avoid unnecessarily chang
 
 ### Mobile-optimized
 
-THe viewport for mobile is set to device-width, so it should display fine enough on mobile devices
+The viewport for mobile is set to device-width, so it should display fine enough on mobile devices
