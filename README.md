@@ -26,6 +26,20 @@ $ docker ps
 $ docker exec cryptoco_web_1 bundle exec rake market_values:update
 ```
 
+## Screenshots
+
+### Homepage
+
+We can see the top 10 cryptocurrencies by market capitalization in this page. Clicking on the symbol, we can see a currency's market history in detail.
+
+![Homepage](public/sc1.png?raw=true "Homepage")
+
+The show page displays the market data of a cryptocurrency in detail. We can see the market capitalization and market values history over time. A chart is given to make it easy to visualize the currency's value over a span of time.
+
+![Detail page](public/sc2.png?raw=true "Detail page")
+
+
+
 ## Decisions
 
 ### Using docker-sync
